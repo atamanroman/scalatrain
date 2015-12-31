@@ -2,6 +2,7 @@ package de.about.scalatrain
 
 object Time {
   def fromMinutes(minutes: Int): Time = {
+    require(minutes >= 0, "minutes must be positive")
     new Time(minutes / 60, minutes % 60)
   }
 }
